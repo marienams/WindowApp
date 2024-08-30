@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WIN_FirstApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WIN_FirstApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
