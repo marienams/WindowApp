@@ -8,8 +8,8 @@ The Assessment consists of the following section:
   - The long press and hold solution code is implemented but the event was not firing, so added a button click animation as a workaround.
 - **Section 3:** The app logs the date and time when it is initialized and stored inside a .txt file in the user AppData folder. This data is then accessed and displayed in this section
 
-![Project Image](AssessmentImages/ScreenshotA.png)
-![Project Image](AssessmentImages/ScreenshotB.png)
+![Project Image](AssessmentImages/ScreenshotA_reduced.jpg)
+![Project Image](AssessmentImages/ScreenshotB_reduced.jpg)
 
 ### Video Demonstration
 
