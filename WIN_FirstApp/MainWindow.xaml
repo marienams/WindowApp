@@ -12,82 +12,121 @@
 
 
 
-    <Grid>
-        <Grid Background="#F5F5F5">
-            <!-- Optional, set a background for the whole window -->
+
+    <Grid Background="#e4e4e4">
+        <!-- Define rows in the Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <!-- First row will size to its content -->
+            <RowDefinition Height="Auto"/>
+            <!-- Second row will take up remaining space -->
+            <RowDefinition Height="0.2*"/>
+            <!-- Third row will have a fixed height of 100 pixels -->
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" >
+
+            <!-- First Section: About -->
+
             <Border Background="White"
-                BorderBrush="LightGray"
-                BorderThickness="1"
-                CornerRadius="10"
-                Padding="20"
-                Margin="20"
-                Width="400">
+            BorderBrush="LightGray"
+            BorderThickness="1"
+            CornerRadius="10"
+            Padding="20"
+            Margin="20"
+            Width="400"
+                    Height="150">
 
                 <StackPanel>
-                    <!-- First Section: About -->
                     <TextBlock Text="About" 
-                           FontWeight="Bold" 
-                           FontSize="16" 
-                           Foreground="#0078D4"/>
-                    
+                   FontWeight="Bold" 
+                   FontSize="16" 
+                   Foreground="#0078D4"/>
 
                     <TextBlock Text="App version: xx.xx.xx"
-                           FontSize="14" 
-                           Foreground="Black" 
-                           Margin="0,5,0,0"/>
+                   FontSize="14" 
+                   Foreground="Black" 
+                   Margin="0,5,0,0"/>
+                    <Line X1="0" Y1="0" X2="350" Y2="0" Stroke="LightGray" StrokeThickness="1" Margin="0,5,0,5"/>
 
-                    
-
-                    <!-- Second Section: Heading -->
                     <TextBlock Text="Heading" 
-                           FontWeight="Bold" 
-                           FontSize="16" 
-                           Foreground="#0078D4"/>
-                    
+                   FontWeight="Bold" 
+                   FontSize="16" 
+                   Foreground="#0078D4"/>
 
                     <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel enim dapibus, rutrum nunc id, ultricies justo."
-                           TextWrapping="Wrap"
-                           FontSize="14" 
-                           Foreground="Black"
-                           Margin="0,5,0,0"/>
+                   TextWrapping="Wrap"
+                   FontSize="14" 
+                   Foreground="Black"
+                   Margin="0,5,0,0"/>
                 </StackPanel>
             </Border>
         </Grid>
-        <Grid Background="#F5F5F5" VerticalAlignment="Center" Margin="0,20,0,0" >
-            <!-- Container for the bar -->
-            <Border Width="100" Height="200" Background="LightGray">
-                <Grid VerticalAlignment="Bottom">
-                    <!-- The blue bar -->
-                    <Rectangle x:Name="BlueBar" Fill="#275DB2" Height="100" RenderTransformOrigin="0.5,1">
-                        <Rectangle.RenderTransform>
-                            <ScaleTransform x:Name="BarScaleTransform" ScaleY="0" />
-                        </Rectangle.RenderTransform>
-                        
-                    </Rectangle>
-                </Grid>
-            </Border>
-            <!-- Button to trigger the animation -->
-            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,20,0,0" Orientation="Vertical" Spacing="10">
-                <Button Content="Animate Bar"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    Margin="0,20,0,0"
-                    Click="Btn_Animation"/>
-                <Button Content="Long Press Bar"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    Margin="0,20,0,0"
-                    PointerPressed="AnimateBar_PointerPressed"
-                    PointerReleased="AnimateBar_PointerReleased"/>
-            </StackPanel>
-            
+        <Grid Grid.Row="1">
+            <!-- Second Section: Blue Bar Animation -->
 
+            <Grid Margin="0,10,0,0">
+                <!-- Define rows in the Grid to separate the bar and button -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!-- This row will take the remaining space -->
+                    <RowDefinition Height="Auto" />
+                    <!-- This row will size to its content -->
+                </Grid.RowDefinitions>
+
+                <!--Container for the bar-->
+                <StackPanel>
+                    <Border Width="100" Height="250" Background="LightGray">
+                        <Grid >
+
+                            <!--The blue bar-->
+
+                            <Rectangle x:Name="BlueBar" Fill="#275DB2" Height="250" RenderTransformOrigin="0.5,1">
+                                <Rectangle.RenderTransform>
+                                    <ScaleTransform x:Name="BlueBarTransform" ScaleY="0" />
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                    </Border>
+                    <Button Content="Animate Bar"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Click="Btn_Animation"
+                            ClickMode="Press"
+                            Margin="0,10,0,0"
+                            Background="#275DB2"
+                            Foreground="White"
+                            Width="200"/>
+                    <!--<Button Content="Long Press Bar"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        PointerPressed="Button_PointerPressed"
+                        PointerReleased="Button_PointerReleased"
+                            />-->
+                    
+                </StackPanel>
+                
+                
+            </Grid>
         </Grid>
-        <Grid>
-            <TextBox x:Name="LogTextBox" 
-                  IsReadOnly="True" 
-                  AcceptsReturn="True" 
-                  TextWrapping="Wrap" />
+        <!-- Third Section: Session View -->
+        <Grid Grid.Row="2" Width="400" Padding="0,10,0,0">
+            
+            <Expander Header="Exp_Session_View" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Top"
+                      Width="400" 
+                      MaxWidth="400" 
+                      MinWidth="400"
+                      IsExpanded="True">
+                <ScrollViewer Width="400" HorizontalScrollBarVisibility="Auto">
+                    <ListBox Name="List_Expander" Width="400" />
+                </ScrollViewer>
+            </Expander>
         </Grid>
+
     </Grid>
+
+
 </Window>

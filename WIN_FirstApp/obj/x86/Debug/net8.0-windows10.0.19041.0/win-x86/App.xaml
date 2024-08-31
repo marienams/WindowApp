@@ -11,6 +11,9 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            
+            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="LightGray"/>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

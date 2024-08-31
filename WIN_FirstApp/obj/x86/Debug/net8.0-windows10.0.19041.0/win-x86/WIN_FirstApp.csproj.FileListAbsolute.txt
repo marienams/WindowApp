@@ -1,3 +1,6 @@
+C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.SDK.NET.dll
+C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\XamlSaveStateFile.xml
+C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\unfiltered.layout.resfiles.intermediate
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WIN_FirstApp.exe
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.xbf
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MainWindow.xbf
@@ -22,6 +25,8 @@ C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windo
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.System.Projection.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\System.Diagnostics.EventLog.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.CSharp.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.VisualBasic.Core.dll
@@ -205,7 +210,6 @@ C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windo
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\mscordbi.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\mscorrc.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\msquic.dll
-C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.SDK.NET.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WinRT.Runtime.dll
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WIN_FirstApp.csproj.AssemblyReference.cache
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.g.i.cs
@@ -217,7 +221,6 @@ C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windo
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MainWindow.xaml
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.xbf
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MainWindow.xbf
-C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\XamlSaveStateFile.xml
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WIN_FirstApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WIN_FirstApp.AssemblyInfoInputs.cache
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WIN_FirstApp.AssemblyInfo.cs
@@ -232,7 +235,6 @@ C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windo
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\priconfig.xml
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\priconfig.xml.intermediate
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\unfiltered.layout.resfiles
-C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\unfiltered.layout.resfiles.intermediate
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\filtered.layout.resfiles
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\filtered.layout.resfiles.intermediate
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\excluded.layout.resfiles
@@ -245,5 +247,3 @@ C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windo
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\qualifiers.txt.intermediate
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ProjectArchitectures.txt
-C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\System.Diagnostics.EventLog.Messages.dll
-C:\Users\Mahima\Desktop\Github\WindowApp\WIN_FirstApp\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\System.Diagnostics.EventLog.dll

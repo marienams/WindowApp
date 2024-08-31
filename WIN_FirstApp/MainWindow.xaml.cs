@@ -12,9 +12,16 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics;
+using Windows.Storage;
+using Windows.UI.Core.AnimationMetrics;
+using System.Windows;
+using System.Windows.Input;
+
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,48 +43,22 @@ namespace WIN_FirstApp
             var windowAPP = this.AppWindow;
             windowAPP.Resize(new SizeInt32(width, height));
             Logging_Access();
-            LoadLogContent();
+            PopulateExpanderWithLog();
+
         }
 
+        
 
 
-        private void AnimateBar_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            // Scale the bar up when the button is pressed
-            StartScaleAnimation(2, 0);  // Adjust the second parameter to the desired scale
-        }
-
-        private void AnimateBar_PointerReleased(object sender, PointerRoutedEventArgs e)
-        {
-            // Scale the bar back down when the button is released
-            StartScaleAnimation(0, 2); // Reverse the scale
-        }
-
-        private void StartScaleAnimation(double from, double to)
-        {
-            var scaleYAnimation = new DoubleAnimation
-            {
-                From = from,
-                To = to,
-                Duration = new Duration(TimeSpan.FromSeconds(0.5)), // Adjust the duration as needed
-                EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
-            };
-
-            var storyboard = new Storyboard();
-            storyboard.Children.Add(scaleYAnimation);
-
-            Storyboard.SetTarget(scaleYAnimation, BarScaleTransform);
-            Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
-
-            storyboard.Begin();
-        }
         private void Btn_Animation(object sender, RoutedEventArgs e)
         {
-            // Create the animation for scaling the bar height
+            //This is the Button to animate
+            //Click to start animation and click again to bring it back down
+            // Animation for scaling the bar height
             DoubleAnimation scaleAnimation = new DoubleAnimation
             {
-                From = isBarScaled ? 2 : 0,
-                To = isBarScaled ? 0 : 2,
+                From = isBarScaled ? 1 : 0,
+                To = isBarScaled ? 0 : 1,
                 Duration = new Duration(TimeSpan.FromSeconds(1)),
                 AutoReverse = false
             };
@@ -85,12 +66,12 @@ namespace WIN_FirstApp
             // Update the scale state tracking
             isBarScaled = !isBarScaled;
 
-            // Create the storyboard to contain the animation
+            // Storyboard for the animation
             Storyboard storyboard = new Storyboard();
             storyboard.Children.Add(scaleAnimation);
 
-            // Set the target property for the animation
-            Storyboard.SetTarget(scaleAnimation, BarScaleTransform);
+            // Target pripety for scale transform
+            Storyboard.SetTarget(scaleAnimation, BlueBarTransform);
             Storyboard.SetTargetProperty(scaleAnimation, "ScaleY");
 
             // Start the animation
@@ -98,23 +79,119 @@ namespace WIN_FirstApp
         }
         private void Logging_Access()
         {
-            string logFilePath = "AppLog.txt";
+            //Log the date and time everytime the app initializes
+            // Get the local app data folder
+            string localFolderPath = ApplicationData.Current.LocalFolder.Path;
+
+            
+            // Check your AppData under your user folder to view AppLog.txt file
+            string logFilePath = Path.Combine(localFolderPath, "AppLog.txt");
+
+            // Log entry to write
             string logEntry = $"App opened at: {DateTime.Now}\n";
+
+            // Append log entry to the file
             File.AppendAllText(logFilePath, logEntry);
         }
-        private void LoadLogContent()
+
+        private void PopulateExpanderWithLog()
         {
-            string logFilePath = "AppLog.txt";
+            //display the data logged inside the view in the expander
+            // Get the local app data folder
+            string localFolderPath = ApplicationData.Current.LocalFolder.Path;
+
+            // Full path for the log file inside the local app data folder
+            string logFilePath = Path.Combine(localFolderPath, "AppLog.txt");
 
             if (File.Exists(logFilePath))
             {
-                string logContent = File.ReadAllText(logFilePath);
-                LogTextBox.Text = logContent; // Display the log content in the TextBox
+                
+                var lines = File.ReadAllLines(logFilePath);
+
+                // Get the last three entries
+                var latestEntries = lines.Reverse().Take(3);
+
+                // Clear existing items before adding new entries
+                List_Expander.Items.Clear();
+
+                // Add each of the latest entries as an individual item
+                foreach (var entry in latestEntries)
+                {
+                    List_Expander.Items.Add(entry);
+                }
             }
             else
             {
-                LogTextBox.Text = "Log file not found."; // Handle if the log file doesn't exist
+                List_Expander.Items.Add("Log file not found.");
             }
+            
         }
+
+
+        //THE LONG PRESS BUTTON FUNCTIONS: NOT WORKING
+
+        //private void Button_PointerPressed(object sender, PointerRoutedEventArgs e)
+        //{
+        //    //StartScaleAnimation(0, 1);
+        //    var scaleYAnimation = new DoubleAnimation
+        //    {
+        //        From = 0,
+        //        To = 2,
+        //        Duration = new Duration(TimeSpan.FromSeconds(0.5)), // Adjust the duration as needed
+        //        EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
+        //    };
+
+        //    var storyboard = new Storyboard();
+        //    storyboard.Children.Add(scaleYAnimation);
+
+        //    Storyboard.SetTarget(scaleYAnimation, BlueBarTransform);
+        //    Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
+
+        //    storyboard.Begin();
+        //}
+
+        //private void Button_PointerReleased(object sender, PointerRoutedEventArgs e)
+        //{
+
+        //    //StartScaleAnimation(1, 0);
+        //    var scaleYAnimation = new DoubleAnimation
+        //    {
+        //        From = 2,
+        //        To = 0,
+        //        Duration = new Duration(TimeSpan.FromSeconds(0.5)), // Adjust the duration as needed
+        //        EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
+        //    };
+
+        //    var storyboard = new Storyboard();
+        //    storyboard.Children.Add(scaleYAnimation);
+
+        //    Storyboard.SetTarget(scaleYAnimation, BlueBarTransform);
+        //    Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
+
+        //    storyboard.Begin();
+        //}
+
+
+        //private void StartScaleAnimation(double from, double to)
+        //{
+        //    var scaleYAnimation = new DoubleAnimation
+        //    {
+        //        From = from,
+        //        To = to,
+        //        Duration = new Duration(TimeSpan.FromSeconds(0.5)), // Adjust the duration as needed
+        //        EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
+        //    };
+
+        //    var storyboard = new Storyboard();
+        //    storyboard.Children.Add(scaleYAnimation);
+
+        //    Storyboard.SetTarget(scaleYAnimation, BlueBarTransform);
+        //    Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
+
+        //    storyboard.Begin();
+        //}
+
+
+
     }
 }

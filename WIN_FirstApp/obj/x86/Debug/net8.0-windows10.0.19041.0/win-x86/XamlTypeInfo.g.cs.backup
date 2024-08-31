@@ -349,10 +349,10 @@ namespace WIN_FirstApp.WIN_FirstApp_XamlTypeInfo
                 userType = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.Activator = Activate_4_Expander;
                 userType.AddMemberName("Header");
-                userType.AddMemberName("IsExpanded");
                 userType.AddMemberName("ExpandDirection");
                 userType.AddMemberName("HeaderTemplate");
                 userType.AddMemberName("HeaderTemplateSelector");
+                userType.AddMemberName("IsExpanded");
                 userType.AddMemberName("TemplateSettings");
                 xamlType = userType;
                 break;
@@ -510,45 +510,45 @@ namespace WIN_FirstApp.WIN_FirstApp_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_2_Expander_IsExpanded(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
-            return that.IsExpanded;
-        }
-        private void set_2_Expander_IsExpanded(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
-            that.IsExpanded = (global::System.Boolean)Value;
-        }
-        private object get_3_Expander_ExpandDirection(object instance)
+        private object get_2_Expander_ExpandDirection(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             return that.ExpandDirection;
         }
-        private void set_3_Expander_ExpandDirection(object instance, object Value)
+        private void set_2_Expander_ExpandDirection(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             that.ExpandDirection = (global::Microsoft.UI.Xaml.Controls.ExpandDirection)Value;
         }
-        private object get_4_Expander_HeaderTemplate(object instance)
+        private object get_3_Expander_HeaderTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             return that.HeaderTemplate;
         }
-        private void set_4_Expander_HeaderTemplate(object instance, object Value)
+        private void set_3_Expander_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_5_Expander_HeaderTemplateSelector(object instance)
+        private object get_4_Expander_HeaderTemplateSelector(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             return that.HeaderTemplateSelector;
         }
-        private void set_5_Expander_HeaderTemplateSelector(object instance, object Value)
+        private void set_4_Expander_HeaderTemplateSelector(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
             that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_5_Expander_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.IsExpanded;
+        }
+        private void set_5_Expander_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
         }
         private object get_6_Expander_TemplateSettings(object instance)
         {
@@ -627,33 +627,33 @@ namespace WIN_FirstApp.WIN_FirstApp_XamlTypeInfo
                 xamlMember.Getter = get_1_Expander_Header;
                 xamlMember.Setter = set_1_Expander_Header;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Expander.IsExpanded":
-                userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
-                xamlMember = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_Expander_IsExpanded;
-                xamlMember.Setter = set_2_Expander_IsExpanded;
-                break;
             case "Microsoft.UI.Xaml.Controls.Expander.ExpandDirection":
                 userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
                 xamlMember = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlMember(this, "ExpandDirection", "Microsoft.UI.Xaml.Controls.ExpandDirection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_Expander_ExpandDirection;
-                xamlMember.Setter = set_3_Expander_ExpandDirection;
+                xamlMember.Getter = get_2_Expander_ExpandDirection;
+                xamlMember.Setter = set_2_Expander_ExpandDirection;
                 break;
             case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplate":
                 userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
                 xamlMember = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_Expander_HeaderTemplate;
-                xamlMember.Setter = set_4_Expander_HeaderTemplate;
+                xamlMember.Getter = get_3_Expander_HeaderTemplate;
+                xamlMember.Setter = set_3_Expander_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplateSelector":
                 userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
                 xamlMember = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_Expander_HeaderTemplateSelector;
-                xamlMember.Setter = set_5_Expander_HeaderTemplateSelector;
+                xamlMember.Getter = get_4_Expander_HeaderTemplateSelector;
+                xamlMember.Setter = set_4_Expander_HeaderTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.IsExpanded":
+                userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_Expander_IsExpanded;
+                xamlMember.Setter = set_5_Expander_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.Expander.TemplateSettings":
                 userType = (global::WIN_FirstApp.WIN_FirstApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
