@@ -11,6 +11,19 @@ The Assessment consists of the following section:
 ![Project Image](AssessmentImages/ScreenshotA_reduced.jpg)
 ![Project Image](AssessmentImages/ScreenshotB_reduced.jpg)
 
-### Video Demonstration
+## Instructions
+
+- Clone the project locally
+- Open the project in Visual Studio Code
+- Run the project
+
+### Things to take care of...
+- Run 'Clean Solution' option under Build (good practice)
+- A log file named "AppLog.txt" is created under your User>[Your User Folder]>AppData>...>AppLog.txt
+- This file is used to update the section 3 of the app
+- 
+## Video Demonstration
 
 A video is included inside AssessmentImages folder, feel free to have a look.
+
+
